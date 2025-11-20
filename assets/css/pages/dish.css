@@ -1,0 +1,266 @@
+.dish-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    align-items: flex-start;
+}
+
+.dish-details .dish-image {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dish-details .dish-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.dish-details .dish-info {
+    flex: 1.5;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.dish-details .dish-info h1 {
+    font-size: 2.8rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.dish-details .dish-info .story {
+    font-family: var(--font-flavour); /* Apply handwritten font for flavor text */
+    font-size: 1.2rem;
+    color: var(--color-primary-accent);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.dish-details .dish-info h2 {
+    font-size: 1.8rem;
+    color: var(--color-text);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.dish-details .dish-info ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.dish-details .dish-info ul li {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.dish-details .dish-info ul li:last-child {
+    border-bottom: none;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.pricing .price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-cta-button);
+}
+
+.pricing .badge {
+    background-color: var(--color-highlight-mint);
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.dish-details .add-to-cart {
+    background-color: var(--color-primary-accent);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.dish-details .add-to-cart:hover {
+    background-color: var(--color-cta-button);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.quick-view-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-highlight-mint);
+    color: #fff;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quick-view-button:hover {
+    background-color: #70e0b4;
+    transform: translateY(-2px);
+}
+
+.dish-modal-toggle {
+    display: none;
+}
+
+.dish-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.dish-modal-toggle:checked ~ .dish-modal-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dish-modal-content {
+    background-color: var(--color-background);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    text-align: center;
+}
+
+.dish-modal-toggle:checked ~ .dish-modal-overlay .dish-modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close-button:hover {
+    color: var(--color-cta-button);
+}
+
+.dish-modal-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.modal-dish-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.modal-story {
+    font-family: var(--font-flavour);
+    font-size: 1.1rem;
+    color: var(--color-primary-accent);
+    margin-bottom: 1.5rem;
+}
+
+.dish-modal-content h3 {
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.dish-modal-content ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+
+.dish-modal-content ul li {
+    font-size: 1rem;
+    color: var(--color-text);
+    padding: 0.3rem 0;
+    border-bottom: 1px dotted #eee;
+}
+
+.dish-modal-content ul li:last-child {
+    border-bottom: none;
+}
+
+.modal-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-cta-button);
+    margin-bottom: 1.5rem;
+}
+
+.add-to-cart-modal {
+    background-color: var(--color-cta-button);
+    color: #fff;
+    padding: 0.9rem 2.2rem;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.add-to-cart-modal:hover {
+    background-color: var(--color-primary-accent);
+    transform: translateY(-2px) scale(1.01);
+}
+
+@media (max-width: 768px) {
+    .dish-modal-content {
+        padding: 1.5rem;
+    }
+
+    .dish-modal-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .modal-close-button {
+        font-size: 1.5rem;
+        top: 10px;
+        right: 15px;
+    }
+}

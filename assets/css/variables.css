@@ -1,0 +1,15 @@
+:root {
+  /* Color Palette */
+  --color-background: #FFF9F3; /* Soft cream, warm tone for comfort */
+  --color-primary-accent: #F8BBD0; /* Light rosé pink */
+  --color-cta-button: #FF5C8A; /* High contrast pink */
+  --color-dish-cards: #FDF2F8; /* Very soft pink for warmth */
+  --color-cart-section: #2B2B40; /* Deep slate blue for contrast */
+  --color-text: #3A3A3A; /* Soft black */
+  --color-highlight-mint: #92F4D1; /* Occasional accents */
+
+  /* Typography */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', 'Open Sans', sans-serif;
+  --font-flavour: 'HomemadeVibes', cursive; /* Placeholder for handwritten font */
+}

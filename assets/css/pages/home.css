@@ -1,0 +1,259 @@
+.hero-section {
+    background: url('https://images.unsplash.com/photo-1543353071-873f17a7e868?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    position: relative;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    backdrop-filter: blur(3px); /* CSS-blurred overlay */
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-family: var(--font-flavour);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    z-index: 2;
+    position: relative;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.search-bar {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 500px;
+    z-index: 2;
+    position: relative;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    color: var(--color-text);
+    transition: all 0.3s ease-in-out;
+}
+
+.search-bar input:focus {
+    border-color: var(--color-highlight-mint);
+    box-shadow: 0 0 0 4px rgba(146, 244, 209, 0.3);
+    background-color: #fff;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    background-color: var(--color-cta-button);
+    color: #fff;
+    font-weight: 600;
+    transition: transform 0.2s ease-in-out;
+}
+
+.search-bar button:hover {
+    transform: scale(1.05);
+}
+
+/* General Section Styling */
+main section {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+}
+
+/* Comfort Picks, Recently Loved, Home Stories */
+.dish-cards-container,
+.restaurant-cards-container,
+.story-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.dish-card,
+.restaurant-card,
+.story-card {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: var(--color-dish-cards);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dish-card:hover,
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+.dish-card h3,
+.restaurant-card h3,
+.story-card h3 {
+    font-size: 1.4rem;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+.dish-card p,
+.restaurant-card p,
+.story-card p {
+    color: var(--color-text);
+    font-size: 0.95rem;
+}
+
+/* Mood-Based Cuisines */
+.mood-based-cuisines .cuisine-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.mood-based-cuisines .cuisine-options span {
+    background-color: var(--color-primary-accent);
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.mood-based-cuisines .cuisine-options span:hover {
+    background-color: var(--color-cta-button);
+    transform: translateY(-2px);
+}
+
+/* Home Stories */
+.home-stories .story-card {
+    text-align: left;
+    /* Specific styling if needed, otherwise uses .card base */
+}
+
+.home-stories .story-card h3 {
+    font-family: var(--font-flavour); /* Apply handwritten font for flavor */
+    font-size: 1.6rem;
+}
+
+.recently-loved-restaurants {
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 0; /* Adjust padding to make space for buttons if needed */
+}
+
+.restaurant-carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel-radio {
+    display: none; /* Hide the actual radio buttons */
+}
+
+.carousel-track {
+    display: flex;
+    overflow: hidden; /* Hide scrollbar now that we're using radio buttons */
+    width: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-track .restaurant-card {
+    flex: 0 0 100%; /* Each card takes full width of the container */
+    width: 100%; /* Ensure cards are responsive within the track */
+    max-width: 300px; /* Keep original max width if preferred */
+    margin: 0 1.5rem; /* Space between cards */
+    scroll-snap-align: start;
+}
+
+/* Positioning for the carousel nav dots */
+.carousel-nav-dots {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.carousel-dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Active dot styling */
+.carousel-radio:checked + .carousel-radio + .carousel-radio + .carousel-radio + .carousel-radio + .carousel-track + .carousel-nav-dots .carousel-dot:nth-child(5),
+.carousel-radio:checked + .carousel-radio + .carousel-radio + .carousel-radio + .carousel-track + .carousel-nav-dots .carousel-dot:nth-child(4),
+.carousel-radio:checked + .carousel-radio + .carousel-radio + .carousel-track + .carousel-nav-dots .carousel-dot:nth-child(3),
+.carousel-radio:checked + .carousel-radio + .carousel-track + .carousel-nav-dots .carousel-dot:nth-child(2),
+.carousel-radio:checked + .carousel-track + .carousel-nav-dots .carousel-dot:nth-child(1) {
+    background-color: var(--color-cta-button);
+}
+
+/* Carousel slide functionality */
+.carousel-radio#slide-1:checked ~ .carousel-track {
+    transform: translateX(0%);
+}
+
+.carousel-radio#slide-2:checked ~ .carousel-track {
+    transform: translateX(calc(-100% / var(--num-slides, 1) * 1)); /* Adjust based on number of slides */
+}
+
+.carousel-radio#slide-3:checked ~ .carousel-track {
+    transform: translateX(calc(-100% / var(--num-slides, 1) * 2));
+}
+
+.carousel-radio#slide-4:checked ~ .carousel-track {
+    transform: translateX(calc(-100% / var(--num-slides, 1) * 3));
+}
+
+.carousel-radio#slide-5:checked ~ .carousel-track {
+    transform: translateX(calc(-100% / var(--num-slides, 1) * 4));
+}
+
+/* Define custom property for number of slides */
+.restaurant-carousel {
+    --num-slides: 5;
+}
+
+@media (max-width: 768px) {
+    .restaurant-carousel {
+        --num-slides: 1; /* One slide at a time on mobile */
+    }
+
+    .carousel-track .restaurant-card {
+        margin: 0 0.5rem;
+    }
+}

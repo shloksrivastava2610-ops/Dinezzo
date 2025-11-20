@@ -1,0 +1,85 @@
+/* Cart Page */
+.cart-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    position: relative; /* Needed for sticky price bar */
+    min-height: calc(100vh - 200px); /* Adjust as needed for header/footer */
+}
+
+.cart-page h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff; /* Inherits from dark-cart.css, but good to ensure */
+}
+
+.cart-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 8rem; /* Space for the sticky price bar */
+}
+
+.cart-item-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Inherits card styling from themes/dark-cart.css */
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+}
+
+.cart-item-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.cart-item-card p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.cart-item-card .item-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* Color and glow from themes/dark-cart.css */
+}
+
+.sticky-price-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-cart-section); /* Inherits from dark-cart.css */
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.sticky-price-bar p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.sticky-price-bar .total-price {
+    color: var(--color-highlight-mint); /* Glowing effect from dark-cart.css */
+    font-size: 1.8rem;
+    text-shadow: 0 0 8px rgba(146, 244, 209, 0.7);
+}
+
+.checkout-cta {
+    /* Inherits button styling from components.css and color from themes/dark-cart.css */
+    padding: 0.9rem 2.2rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+}
+
+.checkout-cta:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,29 @@
+/* About Us Page */
+.about-us-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.about-us-page h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+    font-family: var(--font-flavour); /* Apply handwritten font for emotional branding */
+}
+
+.about-us-page p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+.about-us-page p:last-of-type {
+    margin-bottom: 0;
+}

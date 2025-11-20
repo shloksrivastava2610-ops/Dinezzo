@@ -1,0 +1,94 @@
+/* Checkout Page */
+.checkout-page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.checkout-page h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--color-text);
+}
+
+.checkout-form {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    /* Inherits from components.css */
+    padding: 0.9rem 1.2rem;
+    border-radius: 10px;
+    font-size: 1.05rem;
+}
+
+.order-summary-card {
+    background-color: var(--color-dish-cards); /* Soft card */
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.order-summary-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    color: var(--color-text);
+}
+
+.order-summary-card p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: 0.8rem;
+}
+
+.order-summary-card h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-cta-button);
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.place-order-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    background-color: var(--color-cta-button);
+    color: #fff;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.place-order-button:hover {
+    background-color: var(--color-primary-accent);
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,115 @@
+/* Order Tracking Page */
+.order-tracking {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.order-tracking h1 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--color-text);
+}
+
+.progress-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.progress-bar-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #e0e0e0;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.progress-step .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    border: 3px solid #ccc;
+    margin-bottom: 0.8rem;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-step.active .circle {
+    background-color: var(--color-cta-button);
+    border-color: var(--color-primary-accent);
+    transform: scale(1.1);
+}
+
+.progress-step p {
+    font-size: 1rem;
+    color: #888;
+    font-weight: 500;
+    transition: color 0.4s ease-in-out;
+}
+
+.progress-step.active p {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+/* Animation for progress bar (conceptual - usually involves JS for dynamic update) */
+/* For CSS-only, we can use a keyframe animation on a specific element or state */
+@keyframes progress-animation {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+/* Example: if only the first step is active, no visible progress line yet */
+.progress-bar-container.step-1::after {
+    width: 0%;
+}
+
+/* For demonstration, we can apply an animation on a visual line (pseudo-element) */
+.progress-bar-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--color-cta-button), var(--color-primary-accent));
+    transform: translateY(-50%);
+    z-index: 0;
+    width: 0%; /* Initial state */
+    animation: progress-line 2s forwards;
+}
+
+/* Keyframes for the line animation */
+@keyframes progress-line {
+    to { width: var(--progress-width, 100%); }
+}
+
+/* To control animation for different steps, can use parent classes with custom properties */
+/* Example (would require changing the HTML/adding JS to dynamically add classes/styles) */
+/* For now, just a full progress for visual effect on load */
+
+/* Example of how progress could be set for specific steps if controlled by classes: */
+/* .progress-bar-container.step-2::after { --progress-width: 33%; animation: progress-line 1s forwards; } */
+/* .progress-bar-container.step-3::after { --progress-width: 66%; animation: progress-line 1.5s forwards; } */
+/* .progress-bar-container.step-4::after { --progress-width: 100%; animation: progress-line 2s forwards; } */

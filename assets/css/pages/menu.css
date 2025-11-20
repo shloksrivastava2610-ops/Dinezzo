@@ -1,0 +1,85 @@
+.menu-category {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.menu-category h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+}
+
+.dish-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.dish-card {
+    /* Inherits general card styling from components.css */
+    background-color: var(--color-dish-cards);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dish-card .dish-info h3 {
+    font-size: 1.6rem;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+.dish-card .dish-info p {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.dish-card .veg-icon {
+    display: inline-block;
+    background-color: var(--color-highlight-mint); /* Pastel tone */
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.dish-card .price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-cta-button);
+    margin-bottom: 1.2rem;
+}
+
+.dish-card .add-to-cart {
+    background-color: var(--color-primary-accent);
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.dish-card .add-to-cart:hover {
+    background-color: var(--color-cta-button);
+    transform: scale(1.05);
+}
+
+.dish-card .add-to-cart:active {
+    transform: scale(0.95); /* Pressed effect */
+}
