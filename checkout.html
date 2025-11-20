@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinnezo - Checkout</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/pages/checkout.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Dinnezo</a>
+            <input type="checkbox" id="mobile-nav-checkbox" class="mobile-nav-checkbox">
+            <label for="mobile-nav-checkbox" class="mobile-nav-toggle">&#9776;</label>
+            <ul>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="checkout-page">
+            <h1>Checkout</h1>
+            <form class="checkout-form">
+                <div class="form-group">
+                    <label for="address">Delivery Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-time">Delivery Time:</label>
+                    <select id="delivery-time" name="delivery-time">
+                        <option value="asap">As soon as possible</option>
+                        <option value="60min">Within 60 minutes</option>
+                        <option value="90min">Within 90 minutes</option>
+                    </select>
+                </div>
+                <div class="order-summary-card">
+                    <h2>Order Summary</h2>
+                    <p>Subtotal: $35.99</p>
+                    <p>Delivery Fee: $3.00</p>
+                    <h3>Total: $38.99</h3>
+                </div>
+                <button type="submit" class="place-order-button">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dinnezo. All rights reserved.</p>
+    </footer>
+</body>
+</html>

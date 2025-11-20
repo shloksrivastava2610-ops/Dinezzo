@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinnezo - Dish Details</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/pages/dish.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Dinnezo</a>
+            <input type="checkbox" id="mobile-nav-checkbox" class="mobile-nav-checkbox">
+            <label for="mobile-nav-checkbox" class="mobile-nav-toggle">&#9776;</label>
+            <ul>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="dish-details">
+            <div class="dish-image">
+                <img src="placeholder.jpg" alt="Butter Chicken">
+            </div>
+            <div class="dish-info">
+                <h1>Butter Chicken</h1>
+                <p class="story">The story of this dish dates back to the 1950s...</p>
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>Chicken</li>
+                    <li>Tomatoes</li>
+                    <li>Butter</li>
+                    <li>Cream</li>
+                    <li>Spices</li>
+                </ul>
+                <div class="pricing">
+                    <p class="price">$12.99</p>
+                    <span class="badge">Chef's Recommendation</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+                <input type="checkbox" id="dish-modal-toggle" class="dish-modal-toggle" />
+                <label for="dish-modal-toggle" class="quick-view-button">Quick View</label>
+
+                <div class="dish-modal-overlay">
+                    <div class="dish-modal-content">
+                        <label for="dish-modal-toggle" class="modal-close-button">&times;</label>
+                        <h2>Butter Chicken - Quick View</h2>
+                        <img src="placeholder.jpg" alt="Butter Chicken" class="modal-dish-image">
+                        <p class="modal-story">The story of this dish dates back to the 1950s...</p>
+                        <h3>Ingredients</h3>
+                        <ul>
+                            <li>Chicken</li>
+                            <li>Tomatoes</li>
+                            <li>Butter</li>
+                            <li>Cream</li>
+                            <li>Spices</li>
+                        </ul>
+                        <p class="modal-price">$12.99</p>
+                        <button class="add-to-cart-modal">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dinnezo. All rights reserved.</p>
+    </footer>
+</body>
+</html>

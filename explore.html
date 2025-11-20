@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinnezo - Explore</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/pages/explore.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Dinnezo</a>
+            <input type="checkbox" id="mobile-nav-checkbox" class="mobile-nav-checkbox">
+            <label for="mobile-nav-checkbox" class="mobile-nav-toggle">&#9776;</label>
+            <ul>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="explore-restaurants">
+            <h1>Explore Restaurants</h1>
+            <div class="filters">
+                <label><input type="checkbox" name="filter" value="rating"> Rating</label>
+                <label><input type="checkbox" name="filter" value="home-like"> Home-like food</label>
+                <label><input type="checkbox" name="filter" value="budget-friendly"> Budget-friendly</label>
+                <label><input type="checkbox" name="filter" value="late-night"> Late-night</label>
+            </div>
+            <div class="restaurant-grid">
+                <!-- Restaurant cards will go here -->
+                <div class="restaurant-card">
+                    <h3>Home Flavours</h3>
+                    <p>Rating: 4.5</p>
+                </div>
+                <div class="restaurant-card">
+                    <h3>The Cozy Spoon</h3>
+                    <p>Rating: 4.8</p>
+                </div>
+                <div class="restaurant-card">
+                    <h3>Mom's Kitchen</h3>
+                    <p>Rating: 4.2</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dinnezo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
